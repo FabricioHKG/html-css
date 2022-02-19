@@ -1,0 +1,35 @@
+@charset "UTF8";
+
+body{
+    font-family: 'Works sans', Arial, Helvetica, sans-serif;
+    /* Medidas Absolutas
+    cm, mm, in, px, pt, pc.*/
+
+    /*Medidas Relativas
+    16px é como se fosse 
+    1em em, ex, rem, vw, vh, %.*/
+
+    /*lighter(font leve)[100/200], normal(font normal)[400], bold(font escura), bolder(font super escura)*/
+
+    font-size: 1em;
+
+    /*weight (peso), width (largura), height(altura)*/
+
+}
+h1{
+    
+    /* shorthand font 
+    - font-style -> font-weight -> font-size -> font-family
+
+    font-family: 'Works sans', 'sans-serif';
+    font-weight: bolder;
+    font-size: 3em;
+    font-style: italic;*/
+
+    font: italic bolder 3em 'Works Sans' 'sans-serif';
+}
+h2{
+    font: bolder 2em 'Works Sans';
+}
+
+
