@@ -3,18 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 @font-face {
-    font-family: 'Android';
-    src: url('..fontes/idroid.otf') format('opentype');
+    font-family: 'Android' ;
+    src: url('../fontes/idroid.otf') format('opentype');
     font-weight: normal;
 }
 
-* {
-   
-    margin: 0px;
-    padding: 0px;
-}
-
 :root {
+
    --cor0: #ebe5c5;
    --cor1: #88EAB4;
    --cor2: #3ddc84;
@@ -22,48 +17,56 @@
    --cor4: #135900;
    --cor5: #004623;
 
-   --font-padrão: Arial, Verdana, Helvetica, Sans-serif;
+   --font-padrão: Arial, Verdana, Helvetica, sans-serif;
    --font-destaque: 'Bebas Neue', cursive, sans-serif;
-   --font-andoid: 'Android', cursive, sans-serif;
+   --font-android: 'Android', cursive, sans-serif;
+
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    
 }
 
 body {
     background-color: var(--cor0);
     font-family: var(--font-padrão);
+
+}
+
+a.externo::after {
+    content: '\00A0\1F517';
+
 }
 
 header {
     padding: 40px;
     min-height: 150px;
     text-align: center;
+    background-color: var(--cor4);
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
-}
 
-header > h1 {
-    color: white;
-    font-size: 3em;
-    margin-bottom: 20px;
-    font-weight: normal;
-    font-family: var(--font-destaque);
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.275);
 }
 
 header > p {
     margin: auto;
     color: white;
     font-size: 1.2em;
+
     max-width: 600px;
-    padding-right: 10px;
     padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 30px;
+    font-family: var(--font-padrão);
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.275);
     
-    
 }
-
 nav {
     padding: 10px;
     background-color: var(--cor5);
-    box-shadow: 0px 7px 7px #0000002a;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.241);
+
 }
 
 nav > a {
@@ -72,31 +75,71 @@ nav > a {
     font-weight: bold;
     text-decoration: none;
     transition-duration: 0.7s;
-    
+
 }
+
 
 nav > a:hover {
-    border-radius: 6px;
     color: var(--cor5);
+    border-radius: 5px;
     background-color: var(--cor3);
-    
+
 }
 
-a.externo::after {
-    content: '\00A0\1F517';
+header > h1 {
+    color: white;
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    font-family: var(--font-destaque);
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.275);
+
 }
+
 
 main {
     margin: auto;
-    padding: 20px;
     min-width: 300px;
     max-width: 1000px;
+    
+    padding: 20px;
     margin-bottom: 30px;
-    padding-bottom: 30px;
     background-color: white;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.323);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.33);
+    
+}
+
+main h1 {
+    font-size: 1.8em;
+    color: var(--cor5);
+    font-weight: normal;
+    font-family: var(--font-android);
+    
+}
+
+main h2 {
+    font-size: 1.3em;
+    text-indent: 8px;
+    color: var(--cor4);
+    font-weight: normal;
+    font-family: var(--font-android);
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+
+}
+
+main p {
+    font-size: 1em;
+    margin: 15px 0px;
+    line-height: 2em;
+    text-indent: 30px;
+    text-align: justify;
+}
+
+main strong {
+    color: var(--cor3);
+    
 }
 
 main a {
@@ -105,45 +148,12 @@ main a {
     color: var(--cor5);
     text-decoration: none;
     background-color: var(--cor1);
-    
+
 }
 
 main a:hover {
     color: var(--cor4);
     text-decoration: underline;
-}
-
-main h1 {
-    font-weight: normal;
-    color: var(--cor5);
-    font-family: var(--font-andoid);
-}
-
-main h2 {
-    font-weight: normal;
-    font-size: 1.3em;
-    text-indent: 8px;
-    color: var(--cor4);
-    font-family: var(--font-andoid);
-    background-image: linear-gradient(to right, var(--cor1), transparent);
-}
-
-main p {
-    margin: 15px 0px;
-    font-size: 1em;
-    text-indent: 30px;
-    line-height: 2em;
-    text-align: justify;
-}
-
-article strong {
-    color: var(--cor3);
-}
-
-article img.pequena {
-    margin: auto;
-    width: 350px;
-    display: block;
     
 }
 
@@ -166,25 +176,16 @@ div.video > iframe {
 
 }
 
-aside {
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.172);
-    background-color: var(--cor1);
-    border-radius: 5px;
-    padding: 5px;
+picture > img{
+    width: 100%;
+    
 }
 
-aside ul{
-    list-style-position: inside;
-    list-style-type: '\00A0\2714\00A0';
-    columns: 2;
-}
 
-aside > h3{
-    border-radius: 10px 10px 0px 0px;
-    background-color: var(--cor4);
-    margin: -10px -5px 0px -5px;
-    color: white;
-    padding: 5px;
+article > img.pequena {
+    margin: auto;
+    display: block;
+    max-width: 350px;
 
 }
 
@@ -193,26 +194,50 @@ li abbr {
 
 }
 
-picture > img {
-    width: 100%;
+aside {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--cor1);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.159);
+
+}
+
+aside > ul {
+    columns: 2;
+    list-style-position: inside;
+    list-style-type: '\2714\00A0\00A0';
+
+}
+
+aside > h3 {
+    padding: 5px;
+    color: white;
+    margin: -10px -5px 0px -5px;
+    background-color: var(--cor4);
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+
+footer {
+    padding: 5px;
+    color: white;
+    font-size: 0.9em;
+    text-align: center;
+    background-color: var(--cor5);
+    
 }
 
 footer a {
+    color: white;
+    font-weight: bolder;
     text-decoration: none;
-    color: var(--cor1);
 
 }
 
 footer a:hover {
+    color: var(--cor1);
     text-decoration: underline;
-    color: white;
+
 }
 
-footer{
-    color: white;
-    text-align: center;
-    padding: 5px;
-    font-size: 0.9em;
-    background-color: var(--cor5);
-    
-}
